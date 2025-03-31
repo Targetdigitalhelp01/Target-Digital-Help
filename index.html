@@ -3,414 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Target Digital Help - Professional job application and government form filling services">
-    <title>Target Digital Help - Job Application & Form Filling Services</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>TARGET OFFLINE FORM | Form Filling Services</title>
     <style>
-        :root {
-            --primary-color: #ffcc00;
-            --secondary-color: #000;
-            --accent-color: #0275d8;
-            --danger-color: #d9534f;
-            --success-color: #5cb85c;
-        }
-        
+        /* Modern Stylish Design */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
             color: #333;
             line-height: 1.6;
         }
-        
-        header, footer {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            padding: 20px 15px;
-            font-size: 22px;
-            font-weight: bold;
+        header {
+            background: linear-gradient(90deg, #0066cc 0%, #004d99 100%);
+            color: white;
+            padding: 25px 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        
-        .contact-info {
-            font-size: 18px;
-            margin-top: 10px;
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
-        .contact-info i {
-            margin-right: 5px;
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
-        
         .container {
             width: 90%;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 30px auto;
+            padding: 0 15px;
+        }
+        .service-box {
             background: white;
-            padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            border-left: 5px solid #0066cc;
         }
-        
-        h2 {
-            color: var(--secondary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 8px;
-            margin-top: 30px;
+        .service-box h2 {
+            color: #0066cc;
+            margin-top: 0;
+            font-size: 1.8rem;
         }
-        
-        .box {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border-left: 4px solid var(--accent-color);
-        }
-        
         .highlight {
-            color: var(--accent-color);
-            font-weight: bold;
+            background-color: #fffde7;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #ffc107;
+            margin: 20px 0;
         }
-        
-        .important {
-            font-weight: bold;
-            color: var(--danger-color);
-            animation: blink 1.5s infinite;
-            background-color: #fff3f3;
-            padding: 8px;
-            border-radius: 5px;
+        .highlight h3 {
+            color: #ff6f00;
+            margin-top: 0;
+        }
+        .btn {
             display: inline-block;
-        }
-        
-        @keyframes blink {
-            50% { opacity: 0.7; }
-        }
-        
-        .links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .links a {
-            display: inline-flex;
-            align-items: center;
-            margin: 5px;
-            padding: 12px 20px;
-            background: var(--success-color);
+            background: linear-gradient(90deg, #ff9100 0%, #ff6d00 100%);
             color: white;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+            margin: 10px 5px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(255,109,0,0.3);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
         }
-        
-        .links a:hover {
+        .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 12px rgba(255,109,0,0.4);
         }
-        
-        .links a i {
-            margin-right: 8px;
+        .btn-secondary {
+            background: linear-gradient(90deg, #0066cc 0%, #004d99 100%);
+            box-shadow: 0 4px 8px rgba(0,102,204,0.3);
         }
-        
-        .whatsapp {
-            background: #25D366 !important;
+        .btn-secondary:hover {
+            box-shadow: 0 6px 12px rgba(0,102,204,0.4);
         }
-        
-        .instagram {
-            background: #E1306C !important;
-        }
-        
-        .testimonials {
-            background-color: #f0f8ff;
-            border-left-color: var(--primary-color);
-            padding: 15px;
-            margin-top: 30px;
-        }
-        
-        .testimonial {
-            margin-bottom: 15px;
-            padding: 10px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
             background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        
-        .testimonial-author {
-            font-weight: bold;
-            color: var(--accent-color);
-            text-align: right;
-            font-style: italic;
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
         }
-        
-        .plan-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-            margin-top: 20px;
+        th {
+            background-color: #0066cc;
+            color: white;
         }
-        
-        .plan {
-            flex: 1;
-            min-width: 250px;
-            background: white;
-            border-radius: 10px;
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .contact-box {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
             padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-top: 5px solid var(--primary-color);
-            transition: transform 0.3s ease;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 8px 20px rgba(0,242,254,0.3);
         }
-        
-        .plan:hover {
-            transform: translateY(-5px);
+        .contact-box h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
         }
-        
-        .plan h3 {
-            color: var(--secondary-color);
+        .phone {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .whatsapp-btn {
+            background: #25D366;
+            box-shadow: 0 4px 8px rgba(37,211,102,0.3);
+        }
+        .whatsapp-btn:hover {
+            box-shadow: 0 6px 12px rgba(37,211,102,0.4);
+        }
+        .glow {
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px rgba(0,102,204,0.5);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(0,102,204,0.8);
+            }
+        }
+        .post {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .post h3 {
+            color: #0066cc;
             margin-top: 0;
         }
-        
-        .plan-price {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--accent-color);
-            margin: 15px 0;
-        }
-        
-        .plan-features {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .plan-features li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .plan-features li:before {
-            content: "✓";
-            color: var(--success-color);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        
-        .how-it-works {
-            counter-reset: step;
-            margin-top: 30px;
-        }
-        
-        .step {
-            position: relative;
-            padding-left: 60px;
-            margin-bottom: 25px;
-        }
-        
-        .step:before {
-            counter-increment: step;
-            content: counter(step);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            color: var(--secondary-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        
-        .step h3 {
-            margin-top: 0;
-            color: var(--accent-color);
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 15px;
-            }
-            
-            .plan {
-                min-width: 100%;
-            }
-            
-            header, footer {
-                font-size: 18px;
-                padding: 15px 10px;
-            }
-            
-            .contact-info {
-                font-size: 16px;
-            }
-        }
-        
-        .guarantee-badge {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            padding: 8px 15px;
-            border-radius: 50px;
-            font-weight: bold;
-            display: inline-block;
-            margin: 10px 0;
-            font-size: 14px;
+        .post-links {
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
-
     <header>
-        <div>Target Digital Help</div>
-        <div class="contact-info">
-            <i class="fas fa-phone"></i> 9369680984 | 
-            <i class="fab fa-instagram"></i> target_zone_01
-        </div>
+        <div class="logo">TARGET OFFLINE FORM</div>
+        <div class="tagline">Your One-Stop Solution for All Offline Form Needs</div>
     </header>
 
     <div class="container">
-
-        <h2><i class="fas fa-briefcase"></i> Private Job Application Services</h2>
-        <div class="box">
-            <p><span class="highlight">हम आपके लिए LinkedIn, SarkariCom, WorkIndia जैसे प्लेटफार्म पर जॉब्स सर्च और अप्लाई करते हैं।</span></p>
+        <div class="service-box">
+            <h2>📌 हमारी सर्विसेज / Our Services</h2>
             
-            <div class="guarantee-badge">
-                <i class="fas fa-shield-alt"></i> 100% सुरक्षित और विश्वसनीय सेवा
+            <div class="highlight glow">
+                <h3>🔥 ऑफलाइन फॉर्म भरने की सुविधा (Offline Form Filling Service)</h3>
+                <p><strong>मात्र ₹150 में हम आपके लिए:</strong></p>
+                <ul>
+                    <li>✔️ पूरा फॉर्म प्रोफेशनली भरेंगे (100% एरर-फ्री)</li>
+                    <li>✔️ आपको फॉर्म की PDF कॉपी भेजकर अप्रूवल लेंगे</li>
+                    <li>✔️ स्पीड पोस्ट से भेजेंगे (पोस्टेज चार्जेस इन्क्लूडेड!)</li>
+                    <li>✔️ ट्रैकिंग ID देंगे (आप रियल-टाइम ट्रैक कर सकते हैं)</li>
+                </ul>
+                <p><em>"हमारे 500+ क्लाइंट्स ने सफलतापूर्वक फॉर्म भरवाए हैं!"</em></p>
+                <a href="tel:9369680984" class="btn">अभी कॉल करें (Call Now)</a>
+                <a href="https://wa.me/919369680984?text=Hello%20Sir,%20I%20need%20help%20with%20offline%20form%20filling" class="btn whatsapp-btn">WhatsApp पर जुड़ें</a>
             </div>
-            
-            <h3><i class="fas fa-check-circle"></i> हम क्या करते हैं?</h3>
-            <p>हम आपके <strong>क्वालिफिकेशन, स्किल्स और इंटरेस्ट</strong> के आधार पर <strong>LinkedIn, SarkariCom, WorkIndia, ApnaJobs</strong> जैसे प्लेटफॉर्म्स पर आपके लिए <strong>जॉब्स सर्च</strong> करते हैं और <strong>अप्लाई भी हम ही करते हैं!</strong></p>
 
-            <h3><i class="fas fa-fire"></i> खास बातें:</h3>
-            <ul>
-                <li><i class="fas fa-check"></i> आपकी प्रोफाइल के अनुसार <strong>बेस्ट जॉब सर्च</strong></li>
-                <li><i class="fas fa-check"></i> <strong>फॉर्म भरने की झंझट से मुक्ति</strong> – हम सब कुछ संभालेंगे</li>
-                <li><i class="fas fa-check"></i> हर स्टेप पर <strong>अपडेट और 100% ट्रांसपेरेंसी</strong></li>
-                <li><i class="fas fa-check"></i> <strong>10, 20 या 30 जॉब अप्लाई करने के कस्टम प्लान्स</strong></li>
-                <li><i class="fas fa-check"></i> 24*7 फॉर्म भरने के लिए कांटेक्ट करे बहुत जल्द काम होगा</li>
-            </ul>
+            <div class="highlight">
+                <h3>💻 ऑनलाइन फॉर्म भरने की सुविधा (Online Form Filling)</h3>
+                <p><strong>सिर्फ ₹36 में हम आपके लिए:</strong></p>
+                <ul>
+                    <li>✔️ कोई भी ऑनलाइन फॉर्म भरेंगे (100% सही डिटेल्स के साथ)</li>
+                    <li>✔️ स्क्रीनशॉट्स भेजकर कन्फर्म करेंगे</li>
+                    <li>✔️ पेमेंट/सबमिशन तक पूरा सपोर्ट</li>
+                </ul>
+                <a href="https://wa.me/919369680984?text=Hello%20Sir,%20I%20need%20help%20with%20online%20form%20filling" class="btn whatsapp-btn">WhatsApp पर जुड़ें</a>
+            </div>
+        </div>
 
-            <h3><i class="fas fa-rupee-sign"></i> हमारे प्लान:</h3>
+        <div class="service-box">
+            <h2>📝 करंट वैकेंसी / Current Vacancies</h2>
             
-            <div class="plan-container">
-                <div class="plan">
-                    <h3>Basic Plan</h3>
-                    <div class="plan-price">₹129</div>
-                    <ul class="plan-features">
-                        <li>10 जॉब सर्च और अप्लाई</li>
-                        <li>एप्लीकेशन स्टेटस अपडेट</li>
-                        <li>24/7 सपोर्ट</li>
-                    </ul>
-                </div>
-                
-                <div class="plan">
-                    <h3>Premium Plan</h3>
-                    <div class="plan-price">₹249</div>
-                    <ul class="plan-features">
-                        <li>20 जॉब सर्च और अप्लाई</li>
-                        <li>प्राथमिकता आधारित सर्च</li>
-                        <li>एप्लीकेशन स्टेटस अपडेट</li>
-                    </ul>
-                </div>
-                
-                <div class="plan">
-                    <h3>Ultimate Plan</h3>
-                    <div class="plan-price">₹350</div>
-                    <ul class="plan-features">
-                        <li>30 जॉब सर्च और अप्लाई</li>
-                        <li>प्रोफाइल ऑप्टिमाइजेशन</li>
-                        <li>विशेषज्ञ सुझाव</li>
-                    </ul>
+            <!-- Indian Coast Guard Post -->
+            <div class="post">
+                <h3>Indian Coast Guard Mumbai - Enrolled Follower (Sweeper/Safaiwala)</h3>
+                <p><strong>वैकेंसी:</strong> 9 पद (UR-5, OBC-2, SC-1, EWS-1)</p>
+                <p><strong>लास्ट डेट:</strong> 1 अप्रैल 2025</p>
+                <p><strong>योग्यता:</strong> 10th पास या ITI सर्टिफिकेट</p>
+                <div class="post-links">
+                    <a href="https://drive.google.com/file/d/1VB50T7T5d1ny8yd-ZK5QDZJp1PAsq4-5/view?usp=drivesdk" class="btn btn-secondary">नोटिफिकेशन डाउनलोड</a>
+                    <a href="tel:9369680984" class="btn">फॉर्म भरवाने के लिए कॉल करें</a>
                 </div>
             </div>
             
-            <p class="important">🔥 1000+ से अधिक जॉब अप्लाई करने का अनुभव – आपका समय बचाएं, हम काम करेंगे! 🔥</p>
-            
-            <h3><i class="fas fa-play-circle"></i> कैसे शुरू करें?</h3>
-            
-            <div class="how-it-works">
-                <div class="step">
-                    <h3>फॉर्म भरें</h3>
-                    <p>हमारा Google फॉर्म भरकर अपनी जानकारी सबमिट करें ताकि हम आपकी योग्यता और रुचियों को समझ सकें।</p>
-                    <a href="https://forms.gle/4ftQ87YXafjxrszS6" target="_blank" class="whatsapp">
-                        <i class="fas fa-file-alt"></i> Google Form भरें
-                    </a>
+            <!-- Leh Ladakh Army Post -->
+            <div class="post">
+                <h3>Leh Ladakh Army Poster Bharti 2025</h3>
+                <p><strong>वैकेंसी:</strong> 480 पद (अनुमानित)</p>
+                <p><strong>रैली डेट:</strong> 4-6 अक्टूबर 2025</p>
+                <p><strong>योग्यता:</strong> 10th पास</p>
+                <div class="post-links">
+                    <a href="https://drive.google.com/file/d/1V5dR8yEU5ZQiULpVhmAeVzbTaa8REwoL/view?usp=drivesdk" class="btn btn-secondary">नोटिफिकेशन डाउनलोड</a>
+                    <a href="tel:9369680984" class="btn">फॉर्म भरवाने के लिए कॉल करें</a>
                 </div>
-                
-                <div class="step">
-                    <h3>भुगतान करें</h3>
-                    <p>चुने गए प्लान के अनुसार भुगतान करें (UPI: 9369680984 GPAY/PHONEPAY)। </p>
+            </div>
+            
+            <!-- Army Canteen Pune Post -->
+            <div class="post">
+                <h3>Army Canteen Pune Recruitment 2025</h3>
+                <p><strong>वैकेंसी:</strong> 2 पद (MET & Gardiner)</p>
+                <p><strong>लास्ट डेट:</strong> 4 अगस्त 2025</p>
+                <p><strong>योग्यता:</strong> 10th पास</p>
+                <div class="post-links">
+                    <a href="https://drive.google.com/file/d/1VNQ6aPjoW6j0lRF1_5hLyh6BRQE19TlI/view?usp=drivesdk" class="btn btn-secondary">नोटिफिकेशन डाउनलोड</a>
+                    <a href="tel:9369680984" class="btn">फॉर्म भरवाने के लिए कॉल करें</a>
                 </div>
-                
-                <div class="step">
-                    <h3>हम काम शुरू करेंगे</h3>
-                    <p>भुगतान प्राप्त होने के 24 घंटे के भीतर हम आपके लिए जॉब सर्च और एप्लीकेशन प्रक्रिया शुरू कर देंगे।</p>
+            </div>
+            
+            <!-- NMRC Post -->
+            <div class="post">
+                <h3>Noida Metro Rail Corporation (NMRC) Recruitment 2025</h3>
+                <p><strong>वैकेंसी:</strong> 23 पद (Assistant Manager, Section Engineer, etc.)</p>
+                <p><strong>लास्ट डेट:</strong> 21 अप्रैल 2025</p>
+                <p><strong>योग्यता:</strong> डिप्लोमा/डिग्री (पोस्ट के अनुसार)</p>
+                <div class="post-links">
+                    <a href="https://drive.google.com/file/d/1Vl_lrPMatO-w-5yiHc6DxeeUI8Egjvtt/view?usp=drivesdk" class="btn btn-secondary">नोटिफिकेशन डाउनलोड</a>
+                    <a href="tel:9369680984" class="btn">फॉर्म भरवाने के लिए कॉल करें</a>
                 </div>
             </div>
         </div>
 
-        <h2><i class="fas fa-file-alt"></i> Government Form Filling Services</h2>
-        <div class="box">
-            <p><span class="highlight">सभी प्रकार के सरकारी फॉर्म सिर्फ़ ₹50 में भरवाएं! 🏆</span></p>
-            
-            <h3><i class="fas fa-check-circle"></i> हमारी सेवाएं:</h3>
-            <ul>
-                <li><i class="fas fa-graduation-cap"></i> <strong>Scholarship Forms</strong> - सभी प्रकार की छात्रवृत्ति के फॉर्म</li>
-                <li><i class="fas fa-id-card"></i> <strong>Government Recruitment Forms</strong> - सरकारी भर्ती फॉर्म</li>
-                <li><i class="fas fa-passport"></i> <strong>Document Application Forms</strong> - दस्तावेज आवेदन फॉर्म</li>
-                <li><i class="fas fa-hand-holding-heart"></i> <strong>Welfare Scheme Forms</strong> - कल्याणकारी योजना फॉर्म</li>
-            </ul>
-            
-            <p class="important">🔥 1000+ से अधिक फॉर्म भरने का अनुभव – गलती की कोई संभावना नहीं! 🔥</p>
-            
-            <div class="testimonials">
-                <h3><i class="fas fa-star"></i> ग्राहकों की प्रतिक्रिया</h3>
-                
-                <div class="testimonial">
-                    <p>"Target Digital Help ने मेरे लिए 15 जॉब्स पर अप्लाई किया। 2 कंपनियों से रिस्पॉन्स आया और एक में सेलेक्शन हो गया। बहुत अच्छी सेवा!"</p>
-                    <div class="testimonial-author">- राहुल शर्मा, इंदौर</div>
-                </div>
-                
-                <div class="testimonial">
-                    <p>"स्कॉलरशिप फॉर्म भरवाया था, बिना किसी गलती के समय पर सबमिट हो गया। बहुत धन्यवाद!"</p>
-                    <div class="testimonial-author">- प्रिया पाटिल, पुणे</div>
-                </div>
-            </div>
+        <div class="contact-box">
+            <h2>📞 संपर्क करें / Contact Us</h2>
+            <p>किसी भी फॉर्म भरने संबंधी सहायता के लिए:</p>
+            <div class="phone">9369680984</div>
+            <p>24x7 WhatsApp पर संपर्क करें</p>
+            <a href="https://wa.me/919369680984?text=Hello%20Sir,%20I%20need%20help%20with%20form%20filling" class="btn whatsapp-btn">WhatsApp पर मैसेज करें</a>
         </div>
     </div>
 
     <footer>
-        <div>हमसे संपर्क करें - 24x7 उपलब्ध</div>
-        <div class="links">
-            <a href="https://wa.me/919369680984" target="_blank" class="whatsapp">
-                <i class="fab fa-whatsapp"></i> WhatsApp पर चैट करें
-            </a>
-            <a href="https://www.instagram.com/target_zone_01" target="_blank" class="instagram">
-                <i class="fab fa-instagram"></i> Instagram प्रोफाइल
-            </a>
-            <a href="tel:+919369680984" class="whatsapp">
-                <i class="fas fa-phone"></i> अभी कॉल करें
-            </a>
-        </div>
+        <p>© 2025 TARGET OFFLINE FORM. All Rights Reserved.</p>
+        <p>हम आपके फॉर्म भरने की पूरी प्रक्रिया को आसान बनाते हैं!</p>
     </footer>
-
-    <!-- Google Analytics Code -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX78Y1V36Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-SX78Y1V36Q');
-    </script>
-
 </body>
 </html>
